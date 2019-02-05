@@ -1,0 +1,28 @@
+{
+  "name": "hirespace-worker",
+  "version": "1.0.0",
+  "description": "hirespace-worker to update daily the Real Estate Agents",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "author": "Tin Chu",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "lodash": "^4.17.10",
+    "mongoose": "^5.2.10",
+    "node-cron": "^2.0.3",
+    "nodemon": "^1.18.7",
+    "uuid": "^3.3.2",
+    "voca": "^1.4.0",
+    "aigle": "1.12.0",
+    "csvtojson": "2.0.8",
+    "wpapi": "1.2.1",
+    "moment": "2.24.0",
+    "moment-timezone": "^0.5.23"
+  }
+}
