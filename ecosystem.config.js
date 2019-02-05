@@ -1,6 +1,6 @@
 module.exports = {
   apps : [{
-    name      : 'hirespace-worker',
+    name      : 'hirespace-inactive-worker',
     script    : './index.js',
     env: {
       NODE_ENV: 'development'
