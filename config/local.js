@@ -3,7 +3,7 @@ module.exports = {
   data_endpoint:
     "https://data.ny.gov/resource/yg7h-zjbf.json?$$app_token=bYWDc07XZhLQVXkqPoqQzLbLK&$where=license_type!='REAL ESTATE PRINCIPAL OFFICE' AND license_type!='REAL ESTATE BRANCH OFFICE' AND ",
   inactivity_endpoint: 'https://data.ny.gov/resource/yg7h-zjbf.json?$$app_token=bYWDc07XZhLQVXkqPoqQzLbLK&$where=license_number==',
-  schedule: '* * * * * *',
+  schedule: '* 23 * * *',
   counties: ['KINGS', 'NEW YORK', 'QUEENS', 'BRONX', 'RICHMOND'],
   batchAmount: 1,
   cities: [
