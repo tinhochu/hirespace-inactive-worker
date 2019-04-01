@@ -8,7 +8,11 @@ const BrokerageSchema = new Schema({
   business_name: String,
   business_state: String,
   business_zip: String,
-  county: String
+  county: String,
+  status: {
+    type: String,
+    default: 'hidden'
+  }
 })
 
 mongoose.model('brokerage', BrokerageSchema)

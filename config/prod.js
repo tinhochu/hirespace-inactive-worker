@@ -5,7 +5,7 @@ module.exports = {
     "https://data.ny.gov/resource/yg7h-zjbf.json?$$app_token=bYWDc07XZhLQVXkqPoqQzLbLK&$where=license_type!='REAL ESTATE PRINCIPAL OFFICE' AND license_type!='REAL ESTATE BRANCH OFFICE' AND ",
   inactivity_endpoint:
     'https://data.ny.gov/resource/yg7h-zjbf.json?$$app_token=bYWDc07XZhLQVXkqPoqQzLbLK&$where=license_number==',
-  schedule: '*/5 * * * * *',
+  schedule: '* */5 * * * *',
   batchAmount: 50,
   WP_Endpoint: 'https://onspace.io/wp-json',
   WP_Admin: 'admin',
