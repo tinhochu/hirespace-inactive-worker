@@ -4,7 +4,6 @@ const Aigle = require('aigle')
 const mongoose = require('mongoose')
 const cron = require('node-cron')
 const axios = require('axios')
-// const onSpace = require('./onspaceFn')
 const keys = require('../config/keys')
 Aigle.mixin(_)
 
@@ -28,14 +27,6 @@ const getAgentStatus = async batch => {
       if (data.length === 0) {
         // Means Inactive Agent
         await Agent.findOneAndUpdate({ _id }, { status })
-
-        // Update the Directory on WordPress
-        // await onSpace.updateAgent(license_number, {
-        //   fields: {
-        //     hide_from_algolia: true,
-        //     status
-        //   }
-        // })
 
         // Create an Event where log that Agent got Inactive
         let inactiveEvent = new Event({
@@ -98,8 +89,13 @@ const _init = async () => {
   Event = mongoose.model('event')
   Counter = mongoose.model('counter')
 
+  const cronConf = {
+    scheduled: true,
+    timezone: 'America/Chicago'
+  }
+
   // Schedule Work Every 24 hours
-  cron.schedule(keys.schedule, DailyCheck, { scheduled: true, timezone: 'America/Chicago' })
+  cron.schedule(keys.schedule, DailyCheck, cronConf)
 }
 
 module.exports = {
